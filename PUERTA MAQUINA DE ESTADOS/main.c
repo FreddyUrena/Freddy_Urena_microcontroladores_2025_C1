@@ -87,7 +87,8 @@ struct SYSTEM_IO
 
 struct SYSTEM_CONFIG
 {
-    unsigned int cnt_TCA;//contador en segundos del tiempo de cierre automatico
+    unsigned int cnt_TA;//contador en segundos del tiempo de cierre automatico
+    unsigned int cnt_Tc;//contador en segundos del tiempo de cierre automatico
     unsigned int cnt_RT;//contador en segundos del tiempo maximo de movimiento del motor
     int FDESCONOCIDO;
     int FDETENIDA;//contiene la configuracion del modo detenido
