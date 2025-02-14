@@ -4,7 +4,7 @@
     "idf.openOcdConfigs": [
         "board/esp32-wrover-kit-3.3v.cfg"
     ],
-    "idf.portWin": "COM5",
+    "idf.portWin": "COM6",
     "idf.toolsPathWin": "C:\\Users\\fredd\\.espressif",
     "files.associations": {
         "esp_log.h": "c"

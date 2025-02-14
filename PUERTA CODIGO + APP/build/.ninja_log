@@ -1167,3 +1167,118 @@
 10203	10489	7611636403727426	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
 10489	10582	7611636403727426	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
 10489	10582	7611636403727426	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+460	780	7611992240395953	bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+460	780	7611992240395953	bootloader/bootloader.elf	509686b65351d216
+460	780	7611992240395953	bootloader/bootloader.bin	509686b65351d216
+460	780	7611992240395953	bootloader/bootloader.map	509686b65351d216
+460	780	7611992240395953	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+460	780	7611992240395953	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.elf	509686b65351d216
+460	780	7611992240395953	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.bin	509686b65351d216
+460	780	7611992240395953	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.map	509686b65351d216
+781	821	7611992243608150	bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+781	821	7611992243608150	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+821	908	7611992244807524	CMakeFiles/bootloader-complete	627dc2a4b70de043
+821	908	7611992244807524	bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+821	908	7611992244807524	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/CMakeFiles/bootloader-complete	627dc2a4b70de043
+821	908	7611992244807524	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+373	1969	7611992239511665	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	e5c3672ad37d430b
+1970	2500	7611992255407438	esp-idf/main/libmain.a	ba14c7d071992978
+2500	13842	7611992373809644	esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+2500	13842	7611992373809644	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+13843	15811	7611992374208439	PUERTA.elf	c07f2d5570d45c16
+15812	16156	7611992397310710	.bin_timestamp	38df87e339035a1f
+15812	16156	7611992397310710	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
+16156	16279	7611992397336170	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+16156	16279	7611992397336170	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+324	536	7612042917154373	bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+324	536	7612042917154373	bootloader/bootloader.elf	509686b65351d216
+324	536	7612042917154373	bootloader/bootloader.bin	509686b65351d216
+324	536	7612042917154373	bootloader/bootloader.map	509686b65351d216
+324	536	7612042917154373	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+324	536	7612042917154373	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.elf	509686b65351d216
+324	536	7612042917154373	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.bin	509686b65351d216
+324	536	7612042917154373	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.map	509686b65351d216
+538	580	7612042919356653	bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+538	580	7612042919356653	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+580	665	7612042920555275	CMakeFiles/bootloader-complete	627dc2a4b70de043
+580	665	7612042920555275	bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+580	665	7612042920555275	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/CMakeFiles/bootloader-complete	627dc2a4b70de043
+580	665	7612042920555275	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+253	1218	7612042916503977	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	e5c3672ad37d430b
+1219	1591	7612042926152704	esp-idf/main/libmain.a	ba14c7d071992978
+1591	10880	7612043022454684	esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+1591	10880	7612043022454684	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+10880	12388	7612043022778609	PUERTA.elf	c07f2d5570d45c16
+12388	12705	7612043040957745	.bin_timestamp	38df87e339035a1f
+12388	12705	7612043040957745	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
+12705	12817	7612043040957745	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+12705	12817	7612043040957745	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+185	375	7612045878251900	bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+185	375	7612045878251900	bootloader/bootloader.elf	509686b65351d216
+185	375	7612045878251900	bootloader/bootloader.bin	509686b65351d216
+185	375	7612045878251900	bootloader/bootloader.map	509686b65351d216
+185	375	7612045878251900	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+185	375	7612045878251900	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.elf	509686b65351d216
+185	375	7612045878251900	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.bin	509686b65351d216
+185	375	7612045878251900	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.map	509686b65351d216
+376	415	7612045880202841	bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+376	415	7612045880202841	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+416	496	7612045881370991	CMakeFiles/bootloader-complete	627dc2a4b70de043
+416	496	7612045881370991	bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+416	496	7612045881370991	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/CMakeFiles/bootloader-complete	627dc2a4b70de043
+416	496	7612045881370991	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+178	569	7612045878251900	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	e5c3672ad37d430b
+570	670	7612045882153500	esp-idf/main/libmain.a	ba14c7d071992978
+670	9359	7612045969653912	esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+670	9359	7612045969653912	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+9360	10396	7612045970063670	PUERTA.elf	c07f2d5570d45c16
+10396	10682	7612045983235840	.bin_timestamp	38df87e339035a1f
+10396	10682	7612045983235840	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
+10682	10776	7612045983250762	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+10682	10776	7612045983250762	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+148	338	7612046411759606	bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+148	338	7612046411759606	bootloader/bootloader.elf	509686b65351d216
+148	338	7612046411759606	bootloader/bootloader.bin	509686b65351d216
+148	338	7612046411759606	bootloader/bootloader.map	509686b65351d216
+148	338	7612046411759606	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+148	338	7612046411759606	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.elf	509686b65351d216
+148	338	7612046411759606	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.bin	509686b65351d216
+148	338	7612046411759606	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.map	509686b65351d216
+338	379	7612046413652879	bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+338	379	7612046413652879	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+379	459	7612046414800081	CMakeFiles/bootloader-complete	627dc2a4b70de043
+379	459	7612046414800081	bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+379	459	7612046414800081	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/CMakeFiles/bootloader-complete	627dc2a4b70de043
+379	459	7612046414800081	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+141	521	7612046411654586	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	e5c3672ad37d430b
+522	604	7612046415449498	esp-idf/main/libmain.a	ba14c7d071992978
+604	9270	7612046502651630	esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+604	9270	7612046502651630	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+9270	10311	7612046502952152	PUERTA.elf	c07f2d5570d45c16
+10312	10606	7612046516268088	.bin_timestamp	38df87e339035a1f
+10312	10606	7612046516268088	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
+10606	10703	7612046516353225	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+10606	10703	7612046516353225	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+151	340	7612051989644722	bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+151	340	7612051989644722	bootloader/bootloader.elf	509686b65351d216
+151	340	7612051989644722	bootloader/bootloader.bin	509686b65351d216
+151	340	7612051989644722	bootloader/bootloader.map	509686b65351d216
+151	340	7612051989644722	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	509686b65351d216
+151	340	7612051989644722	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.elf	509686b65351d216
+151	340	7612051989644722	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.bin	509686b65351d216
+151	340	7612051989644722	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader/bootloader.map	509686b65351d216
+341	376	7612051991552524	bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+341	376	7612051991552524	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install	40137c89ac2a0e81
+376	467	7612051992745403	CMakeFiles/bootloader-complete	627dc2a4b70de043
+376	467	7612051992745403	bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+376	467	7612051992745403	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/CMakeFiles/bootloader-complete	627dc2a4b70de043
+376	467	7612051992745403	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/bootloader-done	627dc2a4b70de043
+144	554	7612051989545363	esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj	e5c3672ad37d430b
+555	647	7612051993694687	esp-idf/main/libmain.a	ba14c7d071992978
+647	9426	7612052081946813	esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+647	9426	7612052081946813	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esp_system/ld/sections.ld	9302b5b7677c2b1e
+9426	10471	7612052082400578	PUERTA.elf	c07f2d5570d45c16
+10472	10760	7612052095643387	.bin_timestamp	38df87e339035a1f
+10472	10760	7612052095643387	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/.bin_timestamp	38df87e339035a1f
+10760	10862	7612052095745280	esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0
+10760	10862	7612052095745280	D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/esptool_py/CMakeFiles/app_check_size	526ac452756bdcb0

@@ -24,14 +24,14 @@
 #define ESTADO_DETENIDA 6
 #define ESTADO_DESCONOCIDO 7
 
-#define LM_ACTIVO 1
-#define LM_INACTIVO 0
-#define PP_ACTIVO 1
-#define PP_INACTIVO 0
-#define FTC_ACTIVO 1
-#define FTC_INACTIVO 0
-#define KEY_ACTIVO 1
-#define KEY_INACTIVO 0
+#define LM_ACTIVO 0
+#define LM_INACTIVO 1
+#define PP_ACTIVO 0
+#define PP_INACTIVO 1
+#define FTC_ACTIVO 0
+#define FTC_INACTIVO 1
+#define KEY_ACTIVO 0
+#define KEY_INACTIVO 1
 #define MOTOR_ON 1
 #define MOTOR_OFF 0
 #define LAMP_ON 1
@@ -46,6 +46,9 @@
 
 #define FDETENIDA_SEGUIR 0
 #define FDETENIDA_CONTRARIO 1
+
+#define MAX_TIEMPO_ABIERTA 1200 //Un incremento de 20 equivale a un segundo. Este tiempo en seg = MAX_TIEMPO_ABIERTA*0.050
+#define MAX_RT 3600//Un incremento de 20 equivale a un segundo. Este tiempo en seg = MAX_TIEMPO_ABIERTA*0.050
 
 // se definen los pines de entrada y salida
 #define pin_lsc 2 // limit switch puerta cerrada
@@ -138,7 +141,7 @@ pin_mc 25   // motor cerrar
 pin_lamp 32 // lampara
 pin_buzzer 34*/
 
-    ESP_LOGI(tag, "Event was called from timer");
+    //ESP_LOGI(tag, "Event was called from timer");
     if(gpio_get_level(pin_lsc))
     {
         io.lsc = LM_ACTIVO;
@@ -282,6 +285,53 @@ pin_buzzer 34*/
     {
         gpio_set_level(pin_buzzer, BUZZER_OFF); 
     }
+
+    //contador para cerrar puerta automaticamente si permance abierta un tiempo excesivo
+
+    if(ESTADO_ACTUAL == ESTADO_ABIERTA)
+    {
+        config.cnt_TCA++;
+    }
+
+    else
+    {
+        config.cnt_TCA = 0;
+    }
+
+
+    if (config.cnt_TCA>=MAX_TIEMPO_ABIERTA &&  ESTADO_ACTUAL != ESTADO_ABIERTA)
+    {
+        config.cnt_TCA = 0;
+    }
+
+    static unsigned int ejecutado = 0;
+
+    if(ESTADO_ACTUAL == ESTADO_ABRIENDO || ESTADO_ACTUAL == ESTADO_CERRANDO)
+    {
+        if(ESTADO_ANTERIOR == ESTADO_ABRIENDO || ESTADO_ANTERIOR == ESTADO_CERRANDO)
+        {
+            if(!ejecutado)
+            {
+                config.cnt_RT = 0;
+                ejecutado = 1; 
+            }
+        }
+
+        config.cnt_RT++;
+    }
+
+    else
+    {
+        config.cnt_RT = 0;
+        ejecutado = 0; 
+    }
+
+    if (config.cnt_RT>MAX_RT)
+    {
+        config.cnt_TCA = 0;
+        ejecutado = 0;
+    }
+
 }
 
 int set_timer(void);
@@ -431,6 +481,7 @@ int Func_ESTADO_INICIAL(void)
     // ciclo de estado
     for (;;)
     {
+        ESP_LOGI(tag, "Estado inicial");
         // detectar error en limit switch
         if (io.lsc == LM_ACTIVO && io.lsa == LM_ACTIVO)
         {
@@ -468,7 +519,7 @@ int Func_ESTADO_ERROR(void)
     // ciclo de estado
     for (;;)
     {
-
+        ESP_LOGI(tag, "Estado error");
         io.buzzer = BUZZER_ON;
 
         // ir a ESTADO_ABIERTA si las condiciones de error han sido corregidas Y esto es lo que indican los limit switchs
@@ -505,6 +556,7 @@ int Func_ESTADO_ABRIENDO(void)
     // ciclo de estado
     for (;;)
     {
+        ESP_LOGI(tag, "Estado abriendo");
         // se enciende el motor en el sentido que se amerita para que la puerta se ABRA
         io.ma = MOTOR_ON;
 
@@ -518,6 +570,11 @@ int Func_ESTADO_ABRIENDO(void)
         if (io.lsa == LM_ACTIVO)
         {
             return ESTADO_ABIERTA;
+        }
+
+        if (config.cnt_RT >= MAX_RT)
+        {
+            return ESTADO_ERROR;
         }
     }
 }
@@ -536,6 +593,7 @@ int Func_ESTADO_CERRANDO(void)
     // ciclo de estado
     for (;;)
     {
+        ESP_LOGI(tag, "Estado cerrando");
         // se enciende el motor en el sentido que se amerita para que la puerta se CIERRE
         io.mc = MOTOR_ON;
 
@@ -549,6 +607,11 @@ int Func_ESTADO_CERRANDO(void)
         if (io.lsc == LM_ACTIVO)
         {
             return ESTADO_CERRADA;
+        }
+
+        if (config.cnt_RT >= MAX_RT)
+        {
+            return ESTADO_ERROR;
         }
     }
 }
@@ -567,9 +630,9 @@ int Func_ESTADO_ABIERTA(void)
     // ciclo de estado
     for (;;)
     {
-
-        // estando la puerta abierta indicar por medio de la llave O presionar pp es causa suficiente para que esta se CIERRE
-        if (io.keyc == KEY_ACTIVO || io.pp == PP_ACTIVO)
+        ESP_LOGI(tag, "Estado abierta");
+        // estando la puerta abierta indicar por medio de la llave O presionar pp O que la puerta haya durado un tiempo excesivo abierta es causa suficiente para que esta se CIERRE
+        if (io.keyc == KEY_ACTIVO || io.pp == PP_ACTIVO || config.cnt_TCA>=MAX_TIEMPO_ABIERTA)
         {
             return ESTADO_CERRANDO;
         }
@@ -590,7 +653,7 @@ int Func_ESTADO_CERRADA(void)
     // ciclo de estado
     for (;;)
     {
-
+        ESP_LOGI(tag, "Estado cerrada");
         // estando la puerta cerrada indicar por medio de la llave O presionar pp es causa suficiente para que esta se ABRA
         if (io.keya == KEY_ACTIVO || io.pp == PP_ACTIVO)
         {
@@ -613,7 +676,7 @@ int Func_ESTADO_DETENIDA(void)
     // ciclo de estado
     for (;;)
     {
-
+        ESP_LOGI(tag, "Estado detenida");
         // estando la puerta DETENIDA indicar por medio de la llave es causa suficiente para que esta se ABRA O se CIERRE
         if (io.keya == KEY_ACTIVO)
         {
@@ -668,7 +731,8 @@ int Func_ESTADO_DESCONOCIDO(void)
         01 abrir
         10 esperar
         11 parpadear*/
-
+        
+        ESP_LOGI(tag, "Estado desconocido");
         if (config.FDESCONOCIDO == FDESCONOCIDO_CIERRA)
         {
             return ESTADO_CERRANDO;
