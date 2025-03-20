@@ -1,4 +1,4 @@
-# Install script for directory: D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/main
+# Install script for directory: D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

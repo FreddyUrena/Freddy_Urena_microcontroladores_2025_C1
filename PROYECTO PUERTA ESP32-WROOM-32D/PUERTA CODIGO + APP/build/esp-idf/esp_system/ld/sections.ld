@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: D:\ITLA\2025\C1\Microcontroladores\PUERTA CODIGO + APP\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: D:\ITLA\2025\C1\Microcontroladores\Freddy_Urena_Microcontroladores_2025_C1\PROYECTO PUERTA ESP32-WROOM-32D\PUERTA CODIGO + APP\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

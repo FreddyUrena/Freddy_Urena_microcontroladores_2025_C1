@@ -1,4 +1,4 @@
-24642534284645724
+24646016715474629
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -65820,6 +65820,20 @@ MODULE_ESP32-DEVKITC
 0
 30
 30
+LIBRERIA PERSONAL
+SOT-23-3_1P4X3P040_ONS-L
+
+MMUN2233LT1G 
+0
+3
+3
+LIBRERIA PERSONAL
+lm358
+
+LMV358ID 
+0
+8
+8
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet

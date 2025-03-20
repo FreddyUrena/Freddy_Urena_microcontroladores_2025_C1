@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
-  include("D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
+  include("D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/esp-idf/mbedtls/mbedtls/pkgconfig/cmake_install.cmake")
 
 endif()
 

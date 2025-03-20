@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/fredd/esp/v5.4/esp-idf/components/bootloader/subproject"
   file(MAKE_DIRECTORY "C:/Users/fredd/esp/v5.4/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader"
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix"
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/tmp"
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src"
-  "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/tmp"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/src"
+  "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/ITLA/2025/C1/Microcontroladores/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

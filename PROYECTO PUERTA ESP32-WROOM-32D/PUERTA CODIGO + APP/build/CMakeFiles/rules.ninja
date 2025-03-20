@@ -1809,7 +1809,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\fredd\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"D:\ITLA\2025\C1\Microcontroladores\PUERTA CODIGO + APP" -B"D:\ITLA\2025\C1\Microcontroladores\PUERTA CODIGO + APP\build"
+  command = C:\Users\fredd\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"D:\ITLA\2025\C1\Microcontroladores\Freddy_Urena_Microcontroladores_2025_C1\PROYECTO PUERTA ESP32-WROOM-32D\PUERTA CODIGO + APP" -B"D:\ITLA\2025\C1\Microcontroladores\Freddy_Urena_Microcontroladores_2025_C1\PROYECTO PUERTA ESP32-WROOM-32D\PUERTA CODIGO + APP\build"
   description = Re-running CMake...
   generator = 1
 
