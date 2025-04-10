@@ -1,0 +1,14 @@
+CMake Warning in C:/Users/fredd/esp/v5.4/esp-idf/components/bootloader_support/CMakeLists.txt:
+  The object file directory
+
+    D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/./
+
+  has 202 characters.  The maximum full path to an object file is 250
+  characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+
+    bootloader_flash/src/bootloader_flash_config_esp32.c.obj
+
+  cannot be safely placed under this directory.  The build may not work
+  correctly.
+
+

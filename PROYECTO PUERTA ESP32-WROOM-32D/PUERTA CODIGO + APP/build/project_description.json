@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "PUERTA",
-    "project_version":    "40873da-dirty",
+    "project_version":    "ffc75a3-dirty",
     "project_path":       "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP",
     "idf_path":           "C:/Users/fredd/esp/v5.4/esp-idf",
     "build_dir":          "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/PROYECTO PUERTA ESP32-WROOM-32D/PUERTA CODIGO + APP/build",

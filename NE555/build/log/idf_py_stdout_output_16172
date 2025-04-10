@@ -1,0 +1,136 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr  6 2025 18:55:59[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ae30h (110128) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002ae58 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0002ae7c vaddr=3ffb0000 size=03ea4h ( 16036) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=0002ed28 vaddr=40080000 size=012f0h (  4848) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=8b460h (570464) map[0m
+[0;32mI (341) esp_image: segment 5: paddr=000bb488 vaddr=400812f0 size=16628h ( 91688) load[0m
+[0;32mI (388) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (388) boot: Disabling RNG early entropy source...[0m
+[0;32mI (399) cpu_start: Multicore app[0m
+[0;32mI (407) cpu_start: Pro cpu start user code[0m
+[0;32mI (407) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (407) app_init: Application information:[0m
+[0;32mI (407) app_init: Project name:     NE555[0m
+[0;32mI (411) app_init: App version:      ffc75a3-dirty[0m
+[0;32mI (416) app_init: Compile time:     Apr  6 2025 21:00:05[0m
+[0;32mI (421) app_init: ELF file SHA256:  e954860c6...[0m
+[0;32mI (425) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (429) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (441) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (447) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (452) heap_init: At 3FFB8150 len 00027EB0 (159 KiB): DRAM[0m
+[0;32mI (457) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (462) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (468) heap_init: At 40097918 len 000086E8 (33 KiB): IRAM[0m
+[0;32mI (475) spi_flash: detected chip: generic[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (493) main_task: Started on CPU0[0m
+[0;32mI (503) main_task: Calling app_main()[0m
+[0;32mI (513) WebServer: ESP_WIFI_MODE_AP[0m
+[0;32mI (523) wifi:wifi driver task: 3ffbff64, prio:23, stack:6656, core=0[0m
+[0;32mI (523) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (523) wifi:wifi certification version: v7.0[0m
+[0;32mI (523) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (533) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (543) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (553) wifi:Init static rx buffer num: 10[0m
+[0;32mI (553) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi_init: rx ba win: 6[0m
+[0;32mI (563) wifi_init: accept mbox: 6[0m
+[0;32mI (563) wifi_init: tcpip mbox: 32[0m
+[0;32mI (563) wifi_init: udp mbox: 6[0m
+[0;32mI (573) wifi_init: tcp mbox: 6[0m
+[0;32mI (573) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (583) wifi_init: tcp mss: 1440[0m
+[0;32mI (583) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (853) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (943) wifi:mode : softAP (a0:dd:6c:04:b1:21)[0m
+[0;32mI (1043) wifi:Total power save buffer number: 16[0m
+[0;32mI (1043) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1053) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1053) WebServer: wifi_init_softap finished. SSID:ESP32B password:ASDFGHJKL channel:1[0m
+[0;32mI (1053) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1063) main_task: Returned from app_main()[0m
+[0;32mI (106873) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (106873) wifi:station: 2e:5b:db:45:11:e7 join, AID=1, bgn, 20[0m
+[0;32mI (106953) WebServer: station 2e:5b:db:45:11:e7 join, AID=1[0m
+[0;32mI (107083) wifi:<ba-add>idx:2 (ifx:1, 2e:5b:db:45:11:e7), tid:0, ssn:0, winSize:64[0m
+[0;32mI (107443) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (107443) WebServer: Starting webserver[0m
+[0;32mI (107443) WebServer: Starting server on port: '80'[0m
+[0;32mI (107443) WebServer: Registering URI handlers[0m
+[0;33mW (108613) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (108613) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (108663) wifi:<ba-add>idx:3 (ifx:1, 2e:5b:db:45:11:e7), tid:7, ssn:2, winSize:64[0m
+[0;33mW (145043) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (145043) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (145243) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (145243) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (148963) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (148963) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (157393) WebServer: LED Turned OFF[0m
+[0;32mI (157403) WebServer: Response sent Successfully[0m
+[0;33mW (399053) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (456033) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (456033) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (456103) wifi:<ba-add>idx:2 (ifx:1, 2e:5b:db:45:11:e7), tid:0, ssn:1064, winSize:64[0m
+[0;32mI (457203) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (457233) wifi:<ba-add>idx:2 (ifx:1, 2e:5b:db:45:11:e7), tid:0, ssn:1067, winSize:64[0m
+[0;33mW (758073) wifi:inactive timer: now=2d2103f2 last_rx_time=1b377d23 diff=495e5, aid[1]2e:5b:db:45:11:e7 leave[0m
+[0;32mI (758103) wifi:station: 2e:5b:db:45:11:e7 leave, AID = 1, reason = 4, bss_flags is 8948803, bss:0x3ffb9504[0m
+[0;32mI (758103) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (758103) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (758113) wifi:<ba-del>idx:3, tid:7[0m
+[0;32mI (758113) WebServer: station 2e:5b:db:45:11:e7 leave, AID=1, reason=4[0m
+[0;32mI (1187983) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1187983) wifi:station: 2e:5b:db:45:11:e7 join, AID=1, bgn, 20[0m
+[0;32mI (1188123) WebServer: station 2e:5b:db:45:11:e7 join, AID=1[0m
+[0;32mI (1188243) wifi:<ba-add>idx:2 (ifx:1, 2e:5b:db:45:11:e7), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1188453) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;33mW (1189593) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (1189603) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32mI (1189623) wifi:<ba-add>idx:3 (ifx:1, 2e:5b:db:45:11:e7), tid:7, ssn:2, winSize:64[0m
+[0;32mI (1201763) WebServer: LED Turned OFF[0m
+[0;32mI (1201763) WebServer: Response sent Successfully[0m
+[0;32mI (1203693) WebServer: LED Turned OFF[0m
+[0;32mI (1203693) WebServer: Response sent Successfully[0m
+[0;32mI (1221983) wifi:station: 2e:5b:db:45:11:e7 leave, AID = 1, reason = 8, bss_flags is 691315, bss:0x3ffb9504[0m
+[0;32mI (1221983) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1221983) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (1221993) wifi:<ba-del>idx:3, tid:7[0m
+[0;32mI (1221993) WebServer: station 2e:5b:db:45:11:e7 leave, AID=1, reason=8[0m

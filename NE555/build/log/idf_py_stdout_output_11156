@@ -1,0 +1,126 @@
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "NE555" version: ffc75a3-dirty
+-- Adding linker script D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: C:/Users/fredd/esp/v5.4.1/esp-idf/components/app_trace C:/Users/fredd/esp/v5.4.1/esp-idf/components/app_update C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader_support C:/Users/fredd/esp/v5.4.1/esp-idf/components/bt C:/Users/fredd/esp/v5.4.1/esp-idf/components/cmock C:/Users/fredd/esp/v5.4.1/esp-idf/components/console C:/Users/fredd/esp/v5.4.1/esp-idf/components/cxx C:/Users/fredd/esp/v5.4.1/esp-idf/components/driver C:/Users/fredd/esp/v5.4.1/esp-idf/components/efuse C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp-tls C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_adc C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_app_format C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_bootloader_format C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_coex C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_common C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_ana_cmpr C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_cam C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_dac C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_gpio C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_gptimer C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_i2c C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_i2s C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_isp C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_jpeg C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_ledc C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_parlio C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_pcnt C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_ppa C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_rmt C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_sdio C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_sdm C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_sdmmc C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_sdspi C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_spi C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_touch_sens C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_tsens C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_uart C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_driver_usb_serial_jtag C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_eth C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_event C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_gdbstub C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_hid C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_http_client C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_http_server C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_https_ota C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_https_server C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_hw_support C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_lcd C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_local_ctrl C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_mm C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_netif C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_netif_stack C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_partition C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_phy C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_pm C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_psram C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_ringbuf C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_security C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_system C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_timer C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_vfs_console C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_wifi C:/Users/fredd/esp/v5.4.1/esp-idf/components/espcoredump C:/Users/fredd/esp/v5.4.1/esp-idf/components/esptool_py C:/Users/fredd/esp/v5.4.1/esp-idf/components/fatfs C:/Users/fredd/esp/v5.4.1/esp-idf/components/freertos C:/Users/fredd/esp/v5.4.1/esp-idf/components/hal C:/Users/fredd/esp/v5.4.1/esp-idf/components/heap C:/Users/fredd/esp/v5.4.1/esp-idf/components/http_parser C:/Users/fredd/esp/v5.4.1/esp-idf/components/idf_test C:/Users/fredd/esp/v5.4.1/esp-idf/components/ieee802154 C:/Users/fredd/esp/v5.4.1/esp-idf/components/json C:/Users/fredd/esp/v5.4.1/esp-idf/components/log C:/Users/fredd/esp/v5.4.1/esp-idf/components/lwip D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/main C:/Users/fredd/esp/v5.4.1/esp-idf/components/mbedtls C:/Users/fredd/esp/v5.4.1/esp-idf/components/mqtt C:/Users/fredd/esp/v5.4.1/esp-idf/components/newlib C:/Users/fredd/esp/v5.4.1/esp-idf/components/nvs_flash C:/Users/fredd/esp/v5.4.1/esp-idf/components/nvs_sec_provider C:/Users/fredd/esp/v5.4.1/esp-idf/components/openthread C:/Users/fredd/esp/v5.4.1/esp-idf/components/partition_table C:/Users/fredd/esp/v5.4.1/esp-idf/components/perfmon C:/Users/fredd/esp/v5.4.1/esp-idf/components/protobuf-c C:/Users/fredd/esp/v5.4.1/esp-idf/components/protocomm C:/Users/fredd/esp/v5.4.1/esp-idf/components/pthread C:/Users/fredd/esp/v5.4.1/esp-idf/components/rt C:/Users/fredd/esp/v5.4.1/esp-idf/components/sdmmc C:/Users/fredd/esp/v5.4.1/esp-idf/components/soc C:/Users/fredd/esp/v5.4.1/esp-idf/components/spi_flash C:/Users/fredd/esp/v5.4.1/esp-idf/components/spiffs C:/Users/fredd/esp/v5.4.1/esp-idf/components/tcp_transport C:/Users/fredd/esp/v5.4.1/esp-idf/components/ulp C:/Users/fredd/esp/v5.4.1/esp-idf/components/unity C:/Users/fredd/esp/v5.4.1/esp-idf/components/usb C:/Users/fredd/esp/v5.4.1/esp-idf/components/vfs C:/Users/fredd/esp/v5.4.1/esp-idf/components/wear_levelling C:/Users/fredd/esp/v5.4.1/esp-idf/components/wifi_provisioning C:/Users/fredd/esp/v5.4.1/esp-idf/components/wpa_supplicant C:/Users/fredd/esp/v5.4.1/esp-idf/components/xtensa
+-- Configuring done (17.0s)
+-- Generating done (2.6s)
+-- Build files have been written to: D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build
+[1/16] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+[2/16] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+[3/16] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+[4/16] Linking C static library esp-idf\json\libjson.a
+[5/16] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[6/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/softap_example_main.c.obj
+D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/main/softap_example_main.c:177:13: warning: 'disconnect_handler' defined but not used [-Wunused-function]
+  177 | static void disconnect_handler(void* arg, esp_event_base_t event_base,
+      |             ^~~~~~~~~~~~~~~~~~
+[7/16] Linking C static library esp-idf\main\libmain.a
+[8/16] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_security esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader_support C:/Users/fredd/esp/v5.4.1/esp-idf/components/efuse C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_app_format C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_bootloader_format C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_common C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_hw_support C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_rom C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_security C:/Users/fredd/esp/v5.4.1/esp-idf/components/esp_system C:/Users/fredd/esp/v5.4.1/esp-idf/components/esptool_py C:/Users/fredd/esp/v5.4.1/esp-idf/components/freertos C:/Users/fredd/esp/v5.4.1/esp-idf/components/hal C:/Users/fredd/esp/v5.4.1/esp-idf/components/log C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader/subproject/main C:/Users/fredd/esp/v5.4.1/esp-idf/components/bootloader/subproject/components/micro-ecc C:/Users/fredd/esp/v5.4.1/esp-idf/components/newlib C:/Users/fredd/esp/v5.4.1/esp-idf/components/partition_table C:/Users/fredd/esp/v5.4.1/esp-idf/components/soc C:/Users/fredd/esp/v5.4.1/esp-idf/components/spi_flash C:/Users/fredd/esp/v5.4.1/esp-idf/components/xtensa
+-- Configuring done (10.9s)
+-- Generating done (0.4s)
+-- Build files have been written to: D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/bootloader
+[1/2] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ITLA\2025\C1\Microcontroladores\Freddy_Urena_Microcontroladores_2025_C1\NE555\build\bootloader\esp-idf\esptool_py && C:\Users\fredd\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/fredd/esp/v5.4.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6580 bytes. 0xa80 bytes (9%) free.
+[9/16] No install step for 'bootloader'
+[10/16] Completed 'bootloader'
+[11/16] Generating ld/sections.ld
+[12/16] Linking CXX executable NE555.elf
+[13/16] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/NE555.bin
+[14/16] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ITLA\2025\C1\Microcontroladores\Freddy_Urena_Microcontroladores_2025_C1\NE555\build\esp-idf\esptool_py && C:\Users\fredd\.espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe C:/Users/fredd/esp/v5.4.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/partition_table/partition-table.bin D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build/NE555.bin"
+NE555.bin binary size 0xc2440 bytes. Smallest app partition is 0x100000 bytes. 0x3dbc0 bytes (24%) free.
+[14/16] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\fredd\esp\v5.4.1\esp-idf\components\esptool_py && C:\Users\fredd\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Users/fredd/esp/v5.4.1/esp-idf -D SERIAL_TOOL=C:/Users/fredd/.espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;C:/Users/fredd/esp/v5.4.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build -P C:/Users/fredd/esp/v5.4.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 NE555.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM4
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: a0:dd:6c:04:b1:20
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 25984 bytes to 16378...
+Writing at 0x00001000... (100 %)
+Wrote 25984 bytes (16378 compressed) at 0x00001000 in 0.5 seconds (effective 378.9 kbit/s)...
+Hash of data verified.
+Compressed 795712 bytes to 501133...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c42d... (6 %)
+Writing at 0x0002549c... (9 %)
+Writing at 0x00030ae9... (12 %)
+Writing at 0x000362eb... (16 %)
+Writing at 0x0003c20a... (19 %)
+Writing at 0x00041e76... (22 %)
+Writing at 0x00047e30... (25 %)
+Writing at 0x0004da25... (29 %)
+Writing at 0x000538f1... (32 %)
+Writing at 0x00058b1f... (35 %)
+Writing at 0x0005e107... (38 %)
+Writing at 0x0006397e... (41 %)
+Writing at 0x00068d17... (45 %)
+Writing at 0x0006e0ea... (48 %)
+Writing at 0x000738d9... (51 %)
+Writing at 0x0007978e... (54 %)
+Writing at 0x0007f17f... (58 %)
+Writing at 0x00084d74... (61 %)
+Writing at 0x0008aafc... (64 %)
+Writing at 0x00090261... (67 %)
+Writing at 0x00096023... (70 %)
+Writing at 0x0009c1b4... (74 %)
+Writing at 0x000a1cd9... (77 %)
+Writing at 0x000a768a... (80 %)
+Writing at 0x000b1d4d... (83 %)
+Writing at 0x000b7c95... (87 %)
+Writing at 0x000bdc7e... (90 %)
+Writing at 0x000c3967... (93 %)
+Writing at 0x000c9c9b... (96 %)
+Writing at 0x000cef52... (100 %)
+Wrote 795712 bytes (501133 compressed) at 0x00010000 in 11.5 seconds (effective 555.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 999.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

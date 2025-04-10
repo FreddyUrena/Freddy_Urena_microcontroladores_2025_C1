@@ -406,7 +406,7 @@ int set_timer(void)
         if (xTimerStart(xTimers, 0) != pdPASS)
         {
             // The timer could not be set into the Active state.
-            ESP_LOGE(tag, "TThe timer could not be set into the Active state.");
+            ESP_LOGE(tag, "The timer could not be set into the Active state.");
         }
     }
 
