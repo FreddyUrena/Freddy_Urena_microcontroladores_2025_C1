@@ -29,6 +29,8 @@
 #include <sys/time.h>
 #include "cJSON.h"
 #include "driver/gpio.h"
+#include "driver/ledc.h"
+#include "esp_err.h"
 
 #if !CONFIG_IDF_TARGET_LINUX
 #endif // !CONFIG_IDF_TARGET_LINUX
@@ -50,11 +52,45 @@ float r1a_value = 0.0;
 float r2a_value = 0.0;
 float ca_value = 0.0;
 float dutycycle_value = 0.0;
+float DCToSet = 0.0;
 char mode_value[32] = {0};
 
 float TM = 0.0;
+float THA = 0.0;
+float TLA = 0.0;
 
-void func_modo_monoestable(void);
+#define LEDC_TIMER LEDC_TIMER_0
+#define LEDC_MODE LEDC_LOW_SPEED_MODE
+#define LEDC_OUTPUT_IO (33) // Define the output GPIO
+#define LEDC_CHANNEL LEDC_CHANNEL_0
+#define LEDC_DUTY_RES LEDC_TIMER_13_BIT // Set duty resolution to 13 bits
+#define LEDC_DUTY (4096)                // Set duty to 50%. (2 ** 13) * 50% = 4096
+#define LEDC_FREQUENCY (4000)           // Frequency in Hertz. Set frequency at 4 kHz
+
+static void ledc_init(void)
+{
+    // Prepare and then apply the LEDC PWM timer configuration
+    ledc_timer_config_t ledc_timer = {
+        .speed_mode = LEDC_MODE,
+        .duty_resolution = LEDC_DUTY_RES,
+        .timer_num = LEDC_TIMER,
+        .freq_hz = LEDC_FREQUENCY, // Set output frequency at 4 kHz
+        .clk_cfg = LEDC_AUTO_CLK};
+    ESP_ERROR_CHECK(ledc_timer_config(&ledc_timer));
+
+    // Prepare and then apply the LEDC PWM channel configuration
+    ledc_channel_config_t ledc_channel = {
+        .speed_mode = LEDC_MODE,
+        .channel = LEDC_CHANNEL,
+        .timer_sel = LEDC_TIMER,
+        .intr_type = LEDC_INTR_DISABLE,
+        .gpio_num = LEDC_OUTPUT_IO,
+        .duty = 0, // Set duty to 0%
+        .hpoint = 0};
+    ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
+}
+
+// void func_modo_monoestable(void);
 
 /*********************************WEB SERVER CODE BEGINS*******************************/
 
@@ -235,7 +271,7 @@ static esp_err_t configuracion_post_handler(httpd_req_t *req)
     }
 
     const cJSON *r1_a = cJSON_GetObjectItem(json, "r1");
-    if (c_m == NULL)
+    if (r1_a == NULL)
     {
         ESP_LOGE(TAG, "No se encontró la clave 'r1' en el JSON");
     }
@@ -246,7 +282,7 @@ static esp_err_t configuracion_post_handler(httpd_req_t *req)
     }
 
     const cJSON *r2_a = cJSON_GetObjectItem(json, "r2");
-    if (c_m == NULL)
+    if (r2_a == NULL)
     {
         ESP_LOGE(TAG, "No se encontró la clave 'r2' en el JSON");
     }
@@ -257,7 +293,7 @@ static esp_err_t configuracion_post_handler(httpd_req_t *req)
     }
 
     const cJSON *c_a = cJSON_GetObjectItem(json, "c");
-    if (c_m == NULL)
+    if (c_a == NULL)
     {
         ESP_LOGE(TAG, "No se encontró la clave 'c' en el JSON");
     }
@@ -268,7 +304,7 @@ static esp_err_t configuracion_post_handler(httpd_req_t *req)
     }
 
     const cJSON *dut = cJSON_GetObjectItem(json, "duty");
-    if (c_m == NULL)
+    if (dut == NULL)
     {
         ESP_LOGE(TAG, "No se encontró la clave 'duty' en el JSON");
     }
@@ -287,29 +323,24 @@ static esp_err_t configuracion_post_handler(httpd_req_t *req)
         httpd_resp_send(req, response, strlen(response));
 
         // ESP_LOGI(TAG, "Modo seleccionado: %s", mode->valuestring);
-        if (strcmp(mode->valuestring, "monoestable") == 0)
-        {
-            // ESP_LOGI(TAG, "Modo monoestable");
+        /*if (strcmp(mode->valuestring, "monoestable") == 0)
+         {
+             // ESP_LOGI(TAG, "Modo monoestable");
 
-            TM = 1100 * rm_value * cm_value;
+            // TM = 1100 * rm_value * cm_value;
 
-            ESP_LOGI(TAG, "Pulso de salida monoestable en mS: %f", TM);
+             ESP_LOGI(TAG, "Pulso de salida monoestable en mS: %f", TM);
 
-            //func_modo_monoestable();
-
-            /*gpio_set_level(LED, 1);
-            vTaskDelay(r_m->valuedouble/portTICK_PERIOD_MS);
-            gpio_set_level(LED, 0);*/
-            // ESP_LOGI(TAG, "LED APAGADO");
-        }
-        else if (strcmp(mode->valuestring, "astable") == 0)
-        {
-            // ESP_LOGI(TAG, "Modo astable");
-        }
-        else if (strcmp(mode->valuestring, "pwm") == 0)
-        {
-            // ESP_LOGI(TAG, "Modo PWM");
-        }
+             // func_modo_monoestable();
+         }
+         else if (strcmp(mode->valuestring, "astable") == 0)
+         {
+             // ESP_LOGI(TAG, "Modo astable");
+         }
+         else if (strcmp(mode->valuestring, "pwm") == 0)
+         {
+             // ESP_LOGI(TAG, "Modo PWM");
+         }*/
     }
 
     cJSON_Delete(json);
@@ -480,8 +511,6 @@ void wifi_init_softap(void)
 
 int set_timer(void);
 
-unsigned int RETENCION = 0;
-
 TimerHandle_t xTimers;
 int x;
 
@@ -495,33 +524,16 @@ void vTimerCallback(TimerHandle_t pxTimer)
     {
         BOTON = BOTON_ACTIVADO;
     }
-
-    if (strcmp(mode_value, "monoestable") == 0)
-    {
-
-        if (BOTON == BOTON_ACTIVADO || RETENCION == 1)
-        {
-            RETENCION = 1;
-            gpio_set_level(LED, 1);
-            vTaskDelay(TM / portTICK_PERIOD_MS);
-            gpio_set_level(LED, 0);
-            RETENCION = 0;
-        }
-    }
 }
 
-void func_modo_monoestable(void)
-{
+unsigned int RETENCION = 0;
 
-    if (BOTON == 1 || RETENCION == 1)
-    {
-        RETENCION = 1;
+/*void func_modo_monoestable(void)
+{
         gpio_set_level(LED, 1);
         vTaskDelay(TM / portTICK_PERIOD_MS);
         gpio_set_level(LED, 0);
-        RETENCION = 0;
-    }
-}
+}*/
 
 void app_main(void)
 {
@@ -553,31 +565,73 @@ void app_main(void)
 
     set_timer();
 
-    /*for(;;)
+    // Set the LEDC peripheral configuration
+    ledc_init();
+    // Set duty to 50%
+    ESP_ERROR_CHECK(ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, LEDC_DUTY));
+    // Update duty to apply the new value
+    ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));
+
+    while (1)
     {
-        if (mode_value[0] != '\0') {
-            //ESP_LOGI(TAG, "Modo seleccionado: %s", mode->valuestring);
+        if (mode_value[0] != '\0')
+        {
+            // ESP_LOGI(TAG, "Modo seleccionado: %s", mode->valuestring);
             if (strcmp(mode_value, "monoestable") == 0)
             {
-                ESP_LOGI(TAG, "Modo monoestable");
+                // ESP_LOGI(TAG, "Modo monoestable");
 
-                TM = 1.1*rm_value*cm_value;
+                TM = 1100 * rm_value * cm_value;
 
-                ESP_LOGI(TAG, "Duty cycle: %f", TM);
+                if (BOTON == BOTON_ACTIVADO)
+                { /*gpio_set_level(LED, 1);
+                      || RETENCION == 1
+                     RETENCION = 1;*/
+                    gpio_set_level(LED, 1);
+                    vTaskDelay(TM / portTICK_PERIOD_MS);
+                    gpio_set_level(LED, 0);
+                    // RETENCION = 0;
+                }
+
+                else
+                {
+                    gpio_set_level(LED, 0);
+                }
+
+                /* ESP_LOGI(TAG, "Pulso de salida monoestable en mS %f", TM);
+
+                 gpio_set_level(LED, 1);
+                 vTaskDelay(rm_value/portTICK_PERIOD_MS);
+                 gpio_set_level(LED, 0);
+                 ESP_LOGI(TAG, "LED APAGADO");*/
+            }
+            else if (strcmp(mode_value, "astable") == 0)
+            {
+                // ESP_LOGI(TAG, "Modo astable");
+                /*r1a_value = 0.0;
+                r2a_value = 0.0;
+                ca_value = 0.0;*/
+
+                THA = 693 * (r1a_value + r2a_value) * ca_value;
+                TLA = 693 * r2a_value * ca_value;
 
                 gpio_set_level(LED, 1);
-                vTaskDelay(rm_value/portTICK_PERIOD_MS);
+                vTaskDelay(THA / portTICK_PERIOD_MS);
                 gpio_set_level(LED, 0);
-                ESP_LOGI(TAG, "LED APAGADO");
+                vTaskDelay(TLA / portTICK_PERIOD_MS);
             }
-             else if (strcmp(mode_value, "astable") == 0) {
-                ESP_LOGI(TAG, "Modo astable");
-
-            } else if (strcmp(mode_value, "pwm") == 0) {
-                ESP_LOGI(TAG, "Modo PWM");
+            else if (strcmp(mode_value, "pwm") == 0)
+            {
+                DCToSet = dutycycle_value*81;
+                ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, DCToSet);
+                // Update duty to apply the new value
+                ledc_update_duty(LEDC_MODE, LEDC_CHANNEL);
+            
             }
         }
-    }*/
+
+        vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
 }
 
 int set_timer(void)

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "NE555",
-    "project_version":    "ffc75a3-dirty",
+    "project_version":    "e8c7e07-dirty",
     "project_path":       "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555",
     "idf_path":           "C:/Users/fredd/esp/v5.4.1/esp-idf",
     "build_dir":          "D:/ITLA/2025/C1/Microcontroladores/Freddy_Urena_Microcontroladores_2025_C1/NE555/build",
